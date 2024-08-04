@@ -1,0 +1,14 @@
+.header {
+  &__title {
+    font-family: "Bluu Next Cyrillic", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--brand-light);
+    max-width: 905px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+}
