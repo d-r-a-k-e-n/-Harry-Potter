@@ -1,4 +1,17 @@
 .header {
+  background-image: linear-gradient(
+      to bottom,
+      #1d1d1d 8.41%,
+      rgba(29, 29, 29, 0.82) 34.44%,
+      rgba(29, 29, 29, 0) 72.88%
+    ),
+    (linear-gradient(to top, #1d1d1d 14.33%, rgba(29, 29, 29, 0) 41.43%)),
+    url(/img/hero-section.jpg);
+  background-repeat: no-repeat;
+  background-position: center 71px;
+  background-size: cover;
+  padding-bottom: 253px;
+
   &__title {
     font-family: "Bluu Next Cyrillic", sans-serif;
     font-weight: 700;
@@ -7,8 +20,15 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--brand-light);
-    max-width: 905px;
+    max-width: 1040px;
     margin: 0 auto;
     padding-top: 100px;
+  }
+
+  &__btn {
+    border: none;
+    background: var(--brand-dark);
+    padding: 18px 79px;
+    margin: 80px auto 0;
   }
 }
