@@ -7,6 +7,33 @@
   font-size: 18px;
   line-height: 130%;
   text-align: center;
-  display: flex;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--yellow {
+    border: none;
+    background: var(--brand-dark);
+    border: 1px solid var(--brand-dark);
+    transition: 0.3s;
+
+    &:hover {
+      background-color: var(--primary-dark);
+      color: var(--brand-light);
+      border: 1px solid var(--brand-dark);
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: var(--brand-light);
+    border: 1px solid var(--brand-dark);
+    transition: 0.3s;
+
+    &:hover {
+      background: var(--brand-dark);
+      color: var(--primary-dark);
+    }
+  }
 }
