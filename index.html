@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <h1 class="header__title">Welcome to the world of Harry Potter</h1>
+        <h1 class="title">Welcome to the world of Harry Potter</h1>
         <button class="header__btn button button--yellow" type="button">
           Show all characters
         </button>
@@ -26,9 +26,11 @@
                 src="./img/hogwarts-students.jpg"
                 alt="Hogwarts students"
               />
-              <button class="menu__btn button button--transparent">
-                Hogwarts students
-              </button>
+              <a class="menu__link" href="./pages/students.html">
+                <button class="menu__btn button button--transparent">
+                  Hogwarts students
+                </button>
+              </a>
             </li>
 
             <li class="menu__item">
@@ -37,9 +39,11 @@
                 src="./img/hogwarts-staff.jpg"
                 alt="Hogwarts staff"
               />
-              <button class="menu__btn button button--transparent">
-                Hogwarts staff
-              </button>
+              <a class="menu__link" href="./pages/staff.html"
+                ><button class="menu__btn button button--transparent">
+                  Hogwarts staff
+                </button></a
+              >
             </li>
 
             <li class="menu__item">
@@ -48,14 +52,17 @@
                 src="./img/characters-in-the-house.jpg"
                 alt="Characters in a certain house"
               />
-              <button class="menu__btn button button--transparent">
-                Characters in a certain house
-              </button>
+
+              <a class="menu__link" href="./pages/houses.html"
+                ><button class="menu__btn button button--transparent">
+                  Characters in a certain house
+                </button></a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </main>
-    <script src="./scripts.js"></script>
+    <script src="./js/openingTheList.js"></script>
   </body>
 </html>

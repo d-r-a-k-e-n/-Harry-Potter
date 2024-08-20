@@ -1,0 +1,21 @@
+.title {
+  font-family: "Bluu Next Cyrillic", sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--brand-light);
+  font-size: 40px;
+  padding-top: 80px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 80px;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 100px 0 70px 0;
+  }
+}

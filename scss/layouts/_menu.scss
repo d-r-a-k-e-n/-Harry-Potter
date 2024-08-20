@@ -16,6 +16,10 @@
     align-items: center;
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__img {
     border-radius: 20px;
     width: 300px;

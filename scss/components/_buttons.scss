@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--primary-dark);
 
   @media screen and (min-width: 768px) {
     width: 320px;
