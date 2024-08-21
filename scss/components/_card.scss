@@ -43,21 +43,12 @@
     transition: transform 0.3s;
     border-radius: 20px;
     font-size: 14px;
-    // border: solid 1px var(--brand-dark);
-
-    &:hover {
-      transform: translateY(0);
-    }
   }
 
   &__info--yellow {
     font-weight: 500;
     font-size: 14px;
     color: var(--brand-light);
-  }
-
-  &__item:hover &__info {
-    transform: translateY(0);
   }
 
   &__img {
@@ -72,5 +63,25 @@
     font-size: 26px;
     color: var(--primary-white);
     margin-bottom: 5px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-white);
+    gap: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
   }
 }
