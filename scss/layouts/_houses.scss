@@ -1,0 +1,28 @@
+.houses {
+  &__nav {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    margin-bottom: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: var(--primary-white);
+    border: none;
+    gap: 10px;
+    width: auto;
+    text-transform: uppercase;
+    padding: 0 77px;
+
+    &--active {
+      background-color: var(--brand-dark);
+    }
+  }
+}

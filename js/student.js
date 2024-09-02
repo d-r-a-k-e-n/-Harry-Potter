@@ -46,7 +46,11 @@ fetch("https://hp-api.onrender.com/api/characters/students")
       cardInfo.classList.add("card__info");
 
       // updating content
-      cardImg.src = item.image;
+      if (item.image === "") {
+        cardImg.src = "../img/unknown.jpg";
+      } else {
+        cardImg.src = item.image;
+      }
       cardTitle.innerText = item.name;
       cardTextAlternateNames.innerText = item.alternate_names[0];
       cardTextHouse.innerText = item.house;

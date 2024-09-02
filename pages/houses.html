@@ -9,7 +9,55 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Characters in a certain house</h1>
+      <h2 class="title">Characters in a certain house</h2>
+
+      <nav class="houses__nav">
+        <ul class="houses__list">
+          <li class="houses__item">
+            <button
+              class="houses__btn houses__btn--active button"
+              id="gryffindor"
+            >
+              <svg width="35" height="38">
+                <use href="../img/sprite.svg#gryffindor"></use>
+              </svg>
+              Gryffindor
+            </button>
+          </li>
+
+          <li class="houses__item">
+            <button class="houses__btn button" id="slytherin">
+              <svg width="35" height="38">
+                <use href="../img/sprite.svg#slytherin"></use>
+              </svg>
+              Slytherin
+            </button>
+          </li>
+
+          <li class="houses__item">
+            <button class="houses__btn button" id="ravenclaw">
+              <svg width="35" height="38">
+                <use href="../img/sprite.svg#ravenclaw"></use>
+              </svg>
+              Ravenclaw
+            </button>
+          </li>
+
+          <li class="houses__item">
+            <button class="houses__btn button" id="hufflepuff">
+              <svg width="35" height="38">
+                <use href="../img/sprite.svg#hufflepuff"></use>
+              </svg>
+              Hufflepuff
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="card__list"></ul>
     </div>
+
+    <script src="../js/houses.js"></script>
+    <script src="../js/toggleInfo.js"></script>
   </body>
 </html>

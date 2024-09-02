@@ -1,4 +1,4 @@
-fetch("https://hp-api.onrender.com/api/characters/staff")
+fetch("https://hp-api.onrender.com/api/characters")
   .then((response) => response.json())
   .then((json) => {
     const list = document.querySelector(".card__list");
