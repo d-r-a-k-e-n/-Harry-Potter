@@ -23,6 +23,9 @@
 
     &--active {
       background-color: var(--brand-dark);
+      border-radius: 100px;
+      transition: background-color 0.3s ease;
+      color: black;
     }
   }
 }
