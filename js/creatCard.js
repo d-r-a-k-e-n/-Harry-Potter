@@ -8,7 +8,26 @@ if (fileName === "students.html") {
 } else if (fileName === "staff.html") {
   API = "https://hp-api.onrender.com/api/characters/staff";
 } else if (fileName === "houses.html") {
-  API = "https://hp-api.onrender.com/api/characters";
+  const buttons = document.querySelectorAll(".houses__btn");
+
+  buttons.forEach((button) => {
+    const id = button.id;
+
+    button.addEventListener("click", () => {
+      if (id === "gryffindor") {
+        API = "https://hp-api.onrender.com/api/characters/house/gryffindor";
+      } else if (id === "slytherin") {
+        API = "https://hp-api.onrender.com/api/characters/house/slytherin";
+      } else if (id === "ravenclaw") {
+        API = "https://hp-api.onrender.com/api/characters/house/ravenclaw";
+      } else if (id === "hufflepuff") {
+        API = "https://hp-api.onrender.com/api/characters/house/hufflepuff";
+      }
+      // показано що апі міняється але за межами циклу залишається тим самим
+      console.log(API);
+    });
+    // console.log(API);
+  });
 }
 
 fetch(API)

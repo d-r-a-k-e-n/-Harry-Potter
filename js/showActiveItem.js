@@ -1,8 +1,8 @@
-const itemList = document.querySelectorAll(".houses__item");
+const housesBtn = document.querySelectorAll(".houses__btn");
 
 function showActiveItem() {
-  itemList.forEach((item) => item.classList.remove("houses__btn--active"));
+  housesBtn.forEach((item) => item.classList.remove("houses__btn--active"));
   this.classList.add("houses__btn--active");
 }
 
-itemList.forEach((item) => item.addEventListener("click", showActiveItem));
+housesBtn.forEach((item) => item.addEventListener("click", showActiveItem));

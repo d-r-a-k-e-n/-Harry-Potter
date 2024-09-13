@@ -18,6 +18,15 @@
 
   &__link {
     text-decoration: none;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 80px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 100px;
+    }
   }
 
   &__img {
@@ -30,18 +39,6 @@
 
     @media screen and (min-width: 1280px) {
       width: 380px;
-    }
-  }
-
-  &__btn {
-    margin-bottom: 40px;
-
-    @media screen and (min-width: 768px) {
-      margin-bottom: 80px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      margin-bottom: 100px;
     }
   }
 }
