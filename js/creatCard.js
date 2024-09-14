@@ -5,15 +5,19 @@ let API = "";
 
 if (fileName === "students.html") {
   API = "https://hp-api.onrender.com/api/characters/students";
+  fetchData(API);
 } else if (fileName === "staff.html") {
   API = "https://hp-api.onrender.com/api/characters/staff";
+  fetchData(API);
 } else if (fileName === "houses.html") {
   const buttons = document.querySelectorAll(".houses__btn");
+  API = "https://hp-api.onrender.com/api/characters/house/gryffindor";
+  fetchData(API);
 
   buttons.forEach((button) => {
-    const id = button.id;
-
     button.addEventListener("click", () => {
+      const id = button.id;
+
       if (id === "gryffindor") {
         API = "https://hp-api.onrender.com/api/characters/house/gryffindor";
       } else if (id === "slytherin") {
@@ -23,23 +27,24 @@ if (fileName === "students.html") {
       } else if (id === "hufflepuff") {
         API = "https://hp-api.onrender.com/api/characters/house/hufflepuff";
       }
-      // показано що апі міняється але за межами циклу залишається тим самим
-      console.log(API);
+
+      fetchData(API);
     });
-    // console.log(API);
   });
 }
 
-fetch(API)
-  .then((response) => response.json())
-  .then((json) => {
-    const list = document.querySelector(".card__list");
-    json.forEach((item) => {
-      const id = item.id;
-      const cardItem = document.createElement("li");
-      cardItem.classList.add("card__item");
+function fetchData(API) {
+  fetch(API)
+    .then((response) => response.json())
+    .then((json) => {
+      const list = document.querySelector(".card__list");
+      list.innerHTML = "";
+      json.forEach((item) => {
+        const id = item.id;
+        const cardItem = document.createElement("li");
+        cardItem.classList.add("card__item");
 
-      cardItem.innerHTML = `
+        cardItem.innerHTML = `
           <article class="card__content">
             <img class="card__img"
               src="${item.image === "" ? "../img/unknown.jpg" : item.image}"/>
@@ -57,7 +62,7 @@ fetch(API)
           </article>
           <article id="${id}" class="card__info">
             <p>Name: <span class="card__info--yellow">${item.name}</span></p>
-            <p>Alternate names: <span class="card__info--yellow">${item.alternate_names.slice(0,2)}</span></p>
+            <p>Alternate names: <span class="card__info--yellow">${item.alternate_names.slice(0, 2)}</span></p>
             <p>Species: <span class="card__info--yellow">${item.species}</span></p>
             <p>Gender: <span class="card__info--yellow">${item.gender}</span></p>
             <p>House: <span class="card__info--yellow">${item.house}</span></p>
@@ -75,9 +80,10 @@ fetch(API)
             <p>Hogwarts staff: <span class="card__info--yellow">${item.hogwartsStaff}</span></p>
             <p>Actor: <span class="card__info--yellow">${item.actor}</span></p>
             <p>Alive: <span class="card__info--yellow">${item.alive}</span></p>
-            </article>
-      `;
+          </article>
+        `;
 
-      list.appendChild(cardItem);
+        list.appendChild(cardItem);
+      });
     });
-  });
+}
